@@ -1,0 +1,116 @@
+\documentclass[12pt,openany]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+\usepackage{wrapfig}
+\usepackage[psdextra, colorlinks=true, allcolors=black]{hyperref}
+\usepackage[italian]{babel}
+\usepackage{epigraph}
+\usepackage{afterpage}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \newpage} %serve a lasciare una pagina vuota
+\usepackage{import}
+\usepackage{physics}
+\usepackage[version=4]{mhchem}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{tikz,pgf}
+\usetikzlibrary{snakes}
+\usetikzlibrary{shapes}
+\usepackage{lipsum}
+
+%servono a mettere i simboli greci nei titoli
+\usepackage[open]{bookmark}
+\ProvidesFile{puenc-greek.def}
+\usepackage{textgreek}
+
+\usepackage{float}
+\setlength\parindent{0pt}%e si gode, toglie lo spostmento a destra di una nuova riga
+\setlength{\epigraphwidth}{0.5\textwidth}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+
+\newcommand{\comment}[1]{}
+
+\usepackage{ambienti} %pacchetto dove sono definiti i vari ambienti esercizio, approfondimento ecc
+
+%simboli
+\newcommand{\E}{È 
+\hspace{0.1mm}}
+
+\newcommand{\A}{Å 
+\hspace{0.1mm}}
+
+\begin{document}
+
+\thispagestyle{empty}
+\begin{center}
+
+\begin{minipage}[c]{0.45\textwidth}
+\begin{flushleft}
+\includegraphics[width=0.8\textwidth]{logo-unict-orizzontale-grigio.png}
+\end{flushleft}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.45\textwidth}
+\begin{flushright}
+\includegraphics[width=\textwidth]{logo_dfa_orizzontale}
+\end{flushright}
+\end{minipage}\\
+\medskip
+\hbox to \textwidth{\hrulefill}
+
+\vfill
+\vfill
+
+\uppercase{\sc{ \Large{\textbf{Mesoscopic and Topological Matters}}}}\\
+
+\vfill
+\large{A cura di Joey Butchers}
+
+\vfill
+\vfill
+\hbox to \textwidth{\hrulefill}
+{\sc Anno Accademico 2024-2025}
+\end{center}
+
+\afterpage{\blankpage}
+\newpage
+
+\clearpage                       % Otherwise \pagestyle affects the previous page.
+{                                % Enclosed in braces so that re-definition is temporary.
+  \pagestyle{empty}              % Removes numbers from middle pages.
+  \fancypagestyle{plain}         % Re-definition removes numbers from first page.
+  {
+    \fancyhf{}%                       % Clear all header and footer fields.
+    \renewcommand{\headrulewidth}{0pt}% Clear rules (remove these two lines if not desired).
+    \renewcommand{\footrulewidth}{0pt}%
+  }
+  \tableofcontents
+  \thispagestyle{empty}          % Removes numbers from last page.
+} %roba per mettere l'indice senza numero di pagina ne marks
+
+\newpage
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\nouppercase{\textbf{\thepage}\hfill\leftmark}}
+\fancyhead[RO]{\nouppercase{\rightmark\hfill \textbf{\thepage}}}
+\fancypagestyle{plain}{%
+\fancyhf{} % cancella tutti i campi di intestazione e pi\‘e di pagina
+%\fancyfoot[C]{\bfseries \thepage} % tranne il centro
+\renewcommand{\headrulewidth}{0pt}
+}
+
+\chapter{Lezione 1}
+\import{./Lezioni}{Lezione1}
+
+\end{document}
