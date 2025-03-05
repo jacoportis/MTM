@@ -1,0 +1,236 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{sakurai}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=f7fe4eaf1ee9c40c20b04441f82e92e6}{%
+           family={Sakurai},
+           familyi={S\bibinitperiod},
+           given={J.J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=030d20a93b68e32b0b70197f157c1bf8}{%
+           family={Napolitano},
+           familyi={N\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=25c1384effbd0976ee838da1fbb2b9b1}{%
+           family={Forte},
+           familyi={F\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {italian}%
+      }
+      \list{publisher}{1}{%
+        {Zanichelli}%
+      }
+      \strng{namehash}{d6e6dcc346ddf44cf7c6ec3e2c37a090}
+      \strng{fullhash}{d6e6dcc346ddf44cf7c6ec3e2c37a090}
+      \strng{fullhashraw}{d6e6dcc346ddf44cf7c6ec3e2c37a090}
+      \strng{bibnamehash}{d6e6dcc346ddf44cf7c6ec3e2c37a090}
+      \strng{authorbibnamehash}{d6e6dcc346ddf44cf7c6ec3e2c37a090}
+      \strng{authornamehash}{d6e6dcc346ddf44cf7c6ec3e2c37a090}
+      \strng{authorfullhash}{d6e6dcc346ddf44cf7c6ec3e2c37a090}
+      \strng{authorfullhashraw}{d6e6dcc346ddf44cf7c6ec3e2c37a090}
+      \field{labelalpha}{SNF14}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Meccanica quantistica moderna}
+      \field{year}{2014}
+    \endentry
+    \entry{nardulli2}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=403c887337606a0e4e927250f3dfc6dd}{%
+           family={Nardulli},
+           familyi={N\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Franco Angeli}%
+      }
+      \strng{namehash}{403c887337606a0e4e927250f3dfc6dd}
+      \strng{fullhash}{403c887337606a0e4e927250f3dfc6dd}
+      \strng{fullhashraw}{403c887337606a0e4e927250f3dfc6dd}
+      \strng{bibnamehash}{403c887337606a0e4e927250f3dfc6dd}
+      \strng{authorbibnamehash}{403c887337606a0e4e927250f3dfc6dd}
+      \strng{authornamehash}{403c887337606a0e4e927250f3dfc6dd}
+      \strng{authorfullhash}{403c887337606a0e4e927250f3dfc6dd}
+      \strng{authorfullhashraw}{403c887337606a0e4e927250f3dfc6dd}
+      \field{extraname}{1}
+      \field{labelalpha}{Nar01}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9788846431349}
+      \field{series}{Collana di fisica e scienze esatte}
+      \field{title}{Meccanica quantistica: Applicazioni}
+      \field{year}{2001}
+    \endentry
+    \entry{griffiths}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=a00328547222c4a2a201442ee59dccfd}{%
+           family={Griffiths},
+           familyi={G\bibinitperiod},
+           given={David\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=7a89e36dbf4f2fc28b7fa782d433b9e9}{%
+           family={Schroeter},
+           familyi={S\bibinitperiod},
+           given={Darrell\bibnamedelima F.},
+           giveni={D\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge ; New York, NY}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{53401a5b91631c47aa1d458117bf3f6f}
+      \strng{fullhash}{53401a5b91631c47aa1d458117bf3f6f}
+      \strng{fullhashraw}{53401a5b91631c47aa1d458117bf3f6f}
+      \strng{bibnamehash}{53401a5b91631c47aa1d458117bf3f6f}
+      \strng{authorbibnamehash}{53401a5b91631c47aa1d458117bf3f6f}
+      \strng{authornamehash}{53401a5b91631c47aa1d458117bf3f6f}
+      \strng{authorfullhash}{53401a5b91631c47aa1d458117bf3f6f}
+      \strng{authorfullhashraw}{53401a5b91631c47aa1d458117bf3f6f}
+      \field{labelalpha}{GS18}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Third edition}
+      \field{isbn}{978-1-107-18963-8}
+      \field{title}{Introduction to quantum mechanics}
+      \field{year}{2018}
+    \endentry
+    \entry{nardulli1}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=403c887337606a0e4e927250f3dfc6dd}{%
+           family={Nardulli},
+           familyi={N\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Franco Angeli}%
+      }
+      \strng{namehash}{403c887337606a0e4e927250f3dfc6dd}
+      \strng{fullhash}{403c887337606a0e4e927250f3dfc6dd}
+      \strng{fullhashraw}{403c887337606a0e4e927250f3dfc6dd}
+      \strng{bibnamehash}{403c887337606a0e4e927250f3dfc6dd}
+      \strng{authorbibnamehash}{403c887337606a0e4e927250f3dfc6dd}
+      \strng{authornamehash}{403c887337606a0e4e927250f3dfc6dd}
+      \strng{authorfullhash}{403c887337606a0e4e927250f3dfc6dd}
+      \strng{authorfullhashraw}{403c887337606a0e4e927250f3dfc6dd}
+      \field{extraname}{2}
+      \field{labelalpha}{Nar01}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9788846430823}
+      \field{number}{v. 1}
+      \field{series}{Fisica e scienze esatte}
+      \field{title}{Meccanica quantistica: Principi}
+      \field{year}{2001}
+    \endentry
+    \entry{merzbacher}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=b0fc56f3ca284352172c5822f323b715}{%
+           family={Merzbacher},
+           familyi={M\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{b0fc56f3ca284352172c5822f323b715}
+      \strng{fullhash}{b0fc56f3ca284352172c5822f323b715}
+      \strng{fullhashraw}{b0fc56f3ca284352172c5822f323b715}
+      \strng{bibnamehash}{b0fc56f3ca284352172c5822f323b715}
+      \strng{authorbibnamehash}{b0fc56f3ca284352172c5822f323b715}
+      \strng{authornamehash}{b0fc56f3ca284352172c5822f323b715}
+      \strng{authorfullhash}{b0fc56f3ca284352172c5822f323b715}
+      \strng{authorfullhashraw}{b0fc56f3ca284352172c5822f323b715}
+      \field{labelalpha}{Mer98}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780471887027}
+      \field{title}{Quantum Mechanics}
+      \field{year}{1998}
+    \endentry
+    \entry{sakurai_advanced}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=f7fe4eaf1ee9c40c20b04441f82e92e6}{%
+           family={Sakurai},
+           familyi={S\bibinitperiod},
+           given={J.J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Education, Incorporated}%
+      }
+      \strng{namehash}{f7fe4eaf1ee9c40c20b04441f82e92e6}
+      \strng{fullhash}{f7fe4eaf1ee9c40c20b04441f82e92e6}
+      \strng{fullhashraw}{f7fe4eaf1ee9c40c20b04441f82e92e6}
+      \strng{bibnamehash}{f7fe4eaf1ee9c40c20b04441f82e92e6}
+      \strng{authorbibnamehash}{f7fe4eaf1ee9c40c20b04441f82e92e6}
+      \strng{authornamehash}{f7fe4eaf1ee9c40c20b04441f82e92e6}
+      \strng{authorfullhash}{f7fe4eaf1ee9c40c20b04441f82e92e6}
+      \strng{authorfullhashraw}{f7fe4eaf1ee9c40c20b04441f82e92e6}
+      \field{labelalpha}{Sak67}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9788177589160}
+      \field{series}{Always learning}
+      \field{title}{Advanced Quantum Mechanics}
+      \field{year}{1967}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
