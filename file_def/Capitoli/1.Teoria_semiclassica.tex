@@ -1,5 +1,5 @@
 \section{Equazione semiclassica di Boltzmann}
-Nello studio di una qualsiasi nanostruttura vi è la necessità di fabbricare il contatto tra questa struttura e i dispositivi di misura macroscopici. Tipicamente, ciò viene fatto strutturando elettrodi molto più ampi rispetto ai fili studiati, in modo da metterli in contatto con essi. Un tale elettrodo idealmente funge da serbatoio (sia termico che di particelle) per gli elettroni. Consideriamo quindi un sistema mesoscopico\mn{Per mesoscopico si intende un sistema di dimensioni intermedie tra quelle microscopiche e quelle macroscopiche. Possiamo quindi dire più semplicemente che tale sistema ha dimensioni piccole.} composto da un conduttore (ad esempio un metallo, un semiconduttore o un isolante topologico) in contatto con due serbatoi $L$ ed $R$, di dimensioni macroscopiche che possono fornire sia cariche (più precisamente elettroni) che energia, come in figura:
+Nello studio di una qualsiasi nanostruttura, è necessario mettere a contatto questa struttura con i dispositivi di misura macroscopici. Tipicamente, ciò viene fatto strutturando elettrodi molto più grandi dei sistemi studiati e mettendoli in contatto con questi ultimi. Un tale elettrodo funge da serbatoio ideale (sia termico che di particelle) per gli elettroni. Consideriamo quindi un sistema mesoscopico\mn{Per mesoscopico si intende un sistema di dimensioni intermedie tra quelle microscopiche e quelle macroscopiche. Possiamo quindi dire più semplicemente che tale sistema ha dimensioni piccole.} composto da un conduttore (ad esempio un metallo, un semiconduttore o un isolante topologico) in contatto con due serbatoi $L$ ed $R$, di dimensioni macroscopiche che possono fornire sia cariche (più precisamente elettroni) che energia, come in figura:
 \begin{figure}[H]
    \centering
     \begin{tikzpicture}[scale=1.2]
@@ -17,14 +17,14 @@ Nello studio di una qualsiasi nanostruttura vi è la necessità di fabbricare il
         \draw[stealth-stealth,shorten <= -0.11cm, shorten >= -0.11cm] (-2,-1.2) -- (2,-1.2) node[midway, above] {$L$};
     \end{tikzpicture}
 \end{figure}
-\hspace{-0.6cm}Per serbatoio intendiamo che il numero di elettroni è sostanzialmente invariante, per cui se ad esempio portiamo un elettrone dal serbatoio $L$ al serbatoio $R$ non ci accorgiamo di nessuna differenza, in quanto la differenza tra $n$ e $n \pm 1$ elettroni è trascurabile.\\
-Supponiamo che in tali serbatoi gli elettroni siano in equilibrio, allora essi potranno essere descritti mediante la distribuzione di Fermi-Dirac:
+\hspace{-0.6cm}Per serbatoio ideale intendiamo che il numero di elettroni al suo interno è talmente elevato che la sua temperatura e il suo potenziale chimico restano invariati anche se un elettrone abbandona o entra nel reservoir, in quanto $N\approx N+1$ per $N$ grande.\\
+Tale assunzione implica che quando il numero di elettroni del reservoir varia, questo ritorni istantaneamente ad uno stato di equilibrio, rendendo possibile descrivere gli elettroni dei reservoir mediante la distribuzione di Fermi-Dirac:
 \begin{equation}
     f_D(E,\mu,T)
     = \frac{1}{\exp \bigl[ (E - \mu)/(k_B T) \bigr] + 1}
     \label{eq:distribuzione_Fermi-Dirac}
 \end{equation}
-Essa ci dà il numero di elettroni aventi energia $E$, numero che viene regolato dalla presenza del potenziale chimico.\\
+Essa ci dà la frazione di elettroni aventi energia $E$ a temperatura $T$ e potenzialiìe chimico $\mu$ fissati.\\
 Ricordiamo che tale distribuzione segue l'andamento riportato in figura:
 \begin{figure}[H]
     \centering
@@ -46,12 +46,12 @@ Ricordiamo che tale distribuzione segue l'andamento riportato in figura:
           \addplot[color=orange,samples=100]{\n{25}};
           \addplot[const plot,color=blue] coordinates {(0,1) (\chempot,0) (2.3,0)};
       
-          \legend{$k_\text{B} T = \frac{1}{5} \mu$,$k_\text{B} T = \frac{1}{25} \mu$,$T = 0$}
+          \legend{$k_\text{B} T = \frac{1}{5} \mu$,$k_\text{B} T = \frac{1}{25} \mu$,$T = 0$}.
         \end{axis}
       \end{tikzpicture}
 \end{figure}
 \textbf{DISEGNO PROVVISORIO}\\
-Quando $T$ va a zero, essa assume l'andamento di una funzione a gradino, mentre a temperatura finita ha un andamento più smussato.\\
+Quando $T\to 0$, essa tende a una funzione a gradino, mentre a temperatura finita ha un andamento più smussato.\\
 In generale, i due serbatoi possono avere temperature $T_L$ e $T_R$ o potenziali chimici $\mu_L$ e $\mu_R$ diversi. Il modo più semplice per avere, ad esempio, due potenziali chimici diversi è quello di applicare una differenza di potenziale tra i due serbatoi\mn{Se invece volessimo realizzare una differenza di temperatura è sufficiente applicare un gradiente termico.} collegandoli ad un generatore di tensione, il quale permetterà di modulare $\mu_L$ e $\mu_R$:
 \begin{figure}[H]
     \centering
@@ -75,31 +75,30 @@ In generale, i due serbatoi possono avere temperature $T_L$ e $T_R$ o potenziali
         \draw (0.1,-2) -- (2.4,-2) -- (2.4,-1);
     \end{tikzpicture}
  \end{figure}
-\hspace{-0.6cm}In conseguenza a tale differenza di potenziale chimico, si verificherà un flusso di elettroni tra i due.\\
-Supponiamo che nei due serbatoi il sistema elettronico rimanga in equilibrio anche in presenza di una caduta di tensione o di una differenza di temperatura e, se vi è un flusso di corrente, assumiamo che nei due serbatoi avvenga un rilassamento istantaneo degli elettroni\sn{Per rilassamento istantaneo si intende un processo in cui un sistema passa da uno stato di non equilibrio a uno stato di equilibrio in un tempo trascurabilmente breve, praticamente istantaneo rispetto alle scale temporali del fenomeno in esame.}, i quali rimangono in equilibrio. Ciò significa che gli elettroni nei serbatoi possono essere sempre descritti dalla distribuzione di Fermi-Dirac, la quale rimane invariata\sn{Dubbio mio: ma visto che applichiamo il voltage drop non cambia il potenziale chimico? e quindi la distribuzione di Fermi-Dirac?}.\\
-Studiamo il problema con una teoria semiclassica, dove con tale termine intendiamo che nell'equazione di Boltzmann che a breve scriveremo compare un termine di tipo classico a sinistra e un termine di tipo quantistico a destra.\\
-Possiamo usare un approccio del genere se possiamo descrivere gli elettroni come particelle. Quantitativamente, ciò significa che la lunghezza d'onda di Fermi, la quale ci dà la dimensione del pacchetto d'onda e che è data da
+\hspace{-0.6cm}In conseguenza a tale differenza di potenziale chimico, si verificherà un flusso di elettroni tra i due reservoir, facendo comunque restare questi ultimi in equilibrio per le precedenti assunzioni.\\
+(Di questo paragrafetto lascerei solo la prima nota, forse mettendola nella discussione sopra sui serbatoi ideali)Supponiamo che nei due serbatoi il sistema elettronico rimanga in equilibrio anche in presenza di una caduta di tensione o di una differenza di temperatura e, se vi è un flusso di corrente, assumiamo che nei due serbatoi avvenga un rilassamento istantaneo degli elettroni\sn{Per rilassamento istantaneo si intende un processo in cui un sistema passa da uno stato di non equilibrio a uno stato di equilibrio in un tempo trascurabilmente breve, praticamente istantaneo rispetto alle scale temporali del fenomeno in esame.}, i quali rimangono in equilibrio. Ciò significa che gli elettroni nei serbatoi possono essere sempre descritti dalla distribuzione di Fermi-Dirac, la quale rimane invariata\sn{Dubbio mio: ma visto che applichiamo il voltage drop non cambia il potenziale chimico? e quindi la distribuzione di Fermi-Dirac? probabilmente intende che la funzione di distribuzione è sempre una FD, come forma funzionale, ad un opportuno $\mu$}.\\
+Studiamo il problema con una teoria semiclassica, dove con tale espressione intendiamo che nell'equazione che descrive il sistema figurano sia termini di tipo classico che altri di tipo quantistico. Più precisamente, descriviamo gli elettroni come particelle classiche e riteniamo la loro posizione e il loro impulso conoscibili contemporaneamente con precisione sufficientemente grande, figurando questi come variabili classiche in alcuni termini, mentre convenientemente come operatori quantistici in altri. Quantitativamente, ciò è ragionevole quando la lunghezza d'onda di Fermi, che rappresenta la larghezza del pacchetto d'onda e quindi l'incertezza sulla posizione della particella data dal principio di indeterminazione di Heisenberg, data da\sn{io ho trovato come def $\frac{2\pi}{k_F}=\frac{2\pi\hbar}{\sqrt{2m^*E_F}}$}
 \begin{equation*}
-    \lambda_F=\frac{\pi \hbar}{E_F}
+    \lambda_F=\frac{\pi \hbar}{E_F},
 \end{equation*}
-dove $E_F$ è l'energia di Fermi, è molto più piccola di tutte le scale di lunghezza del sistema. Ciò significa che deve essere molto più piccola delle dimensioni tipiche del sistema ma anche dei diversi liberi cammini medi, cioè delle distanze medie percorse tra due fenomeni di scattering degli elettroni con le impurità del sistema, con i bordi del sistema, con i fononi o con altri elettroni. In particolare, nella nostra trattazione siamo interessati a tre tipi di liberi cammini medi:
+essendo $E_F$ l'energia di Fermi, è molto più piccola di tutte le scale di lunghezza del sistema. Ciò significa che $\lambda_F$ deve essere molto più piccola delle dimensioni tipiche del sistema e dei diversi liberi cammini medi, cioè delle distanze percorse mediamente da un elettrone tra due eventi consecutivi di scattering della medesima tipologia. In particolare, nella nostra trattazione siamo interessati a tre tipi di liberi cammini medi:
 \begin{itemize}[leftmargin=0.5cm]
-    \item La lunghezza di scattering elastico $\ell_{\rm el}$, la quale è associata allo scattering degli elettroni con le impurità del sistema;
-    \item La lunghezza di scattering elettrone-elettrone $\ell_{\rm e-e}$, la quale è legata allo scattering di elettroni con altri elettroni, dunque è dovuta all'interazione coulombiana;
-    \item La lunghezza di scattering elettrone-fonone $\ell_{\rm e-ph}$, la quale è associata allo scattering degli elettroni con i fononi del sistema.
+    \item la lunghezza di scattering elastico $\ell_{\rm el}$, associata allo scattering degli elettroni con le impurità del sistema;
+    \item la lunghezza di scattering elettrone-elettrone $\ell_{\rm e,e}$, legata allo scattering di elettroni con altri elettroni e dunque dovuta all'interazione coulombiana;
+    \item la lunghezza di scattering elettrone-fonone $\ell_{\rm e,ph}$, associata allo scattering degli elettroni con i fononi del sistema.
 \end{itemize}
-Precisiamo che:
+Precisiamo i seguenti fatti:
 \begin{itemize}[leftmargin=0.5cm]
-    \item Nello scattering tra elettroni e impurezze lo scattering è elastico, per cui l'energia dell'elettrone si conserva;
-    \item Lo scattering elettrone-elettrone non conserva l'energia del singolo elettrone ma globalmente l'energia si conserva. Ciò è dovuto al fatto che nello scattering i due elettroni possono scambiare energia, come possiamo vedere nel seguente diagramma:
+    \item lo scattering tra elettroni e impurità è elastico, per cui l'energia dell'elettrone si conserva;
+    \item lo scattering elettrone-elettrone non conserva l'energia del singolo elettrone ma l'energia totale dei due elettroni. Ciò è dovuto al fatto che nello scattering i due elettroni possono scambiare energia, come possiamo vedere nel seguente diagramma:
     \begin{figure}[H]
         \centering
         \begin{tikzpicture}
             \node at (0,0) {\textbf{Mettere disegno diagramma di Feynman}};
         \end{tikzpicture}
     \end{figure}
-    Per quanto detto avremo che, se $E_1$ ed $E_2$ sono le energie prima dello scattering e $E_1'$ ed $E_2'$ le energie dopo lo scattering, allora avremo che $E_1 \neq E_1'$ e $E_2 \neq E_2'$ ma $E_1 + E_2 = E_1' + E_2'$;
-    \item Infine nello scattering elettrone-fonone, in cui si ha l'assorbimento o l'emissione di un fonone di energia $\hbar \omega$ l'energia non si conserva, in quanto dopo lo scattering l'elettrone inizialmente avente energia $E$ avrà energia $E \pm \hbar \omega$, come possiamo vedere nei seguenti diagrammi:
+    Per quanto detto avremo che, se $E_1$ ed $E_2$ sono le energie prima dello scattering e $E_1'$ ed $E_2'$ le energie dopo lo scattering, allora avremo che in generale $E_1 \neq E_1'$ e $E_2 \neq E_2'$ ma $E_1 + E_2 = E_1' + E_2'$;
+    \item nello scattering elettrone-fonone, in cui si ha l'assorbimento o l'emissione di un fonone di energia $\hbar \omega$, l'energia non si conserva, in quanto dopo lo scattering l'elettrone inizialmente avente energia $E$ avrà energia $E \pm \hbar \omega$, come possiamo vedere nei seguenti diagrammi:
     \begin{figure}[H]
         \centering
         \begin{tikzpicture}
@@ -107,52 +106,52 @@ Precisiamo che:
         \end{tikzpicture}
     \end{figure}
 \end{itemize}
-A seguito di questi processi di scattering, se essi sono abbastanza efficienti, si ha un "dephasing", ossia una randomizzazione della fase della funzione d'onda. In conseguenza a ciò vengono meno tutti i processi coerenti come i processi di interferenza. Nel momento in cui vengono meno questi ultimi, la particella, a meno di correzioni di cui terremo conto, si comporta come una particella classica. Questo tipo di descrizione è tipico della fisica dei semiconduttori. Bisogna però stare attenti a che processo si sta studiando: ad esempio, tale approccio non funziona per studiare l'assorbimento inter-banda in cui vogliamo studiare il passaggio di un elettrone dalla banda di valenza alla banda di conduzione, in quanto il concetto di banda non esiste classicamente; al contrario, tale approccio funziona quando studiamo trasporto in corrente continua o modulato debolmente.\\
-Il nostro obiettivo è di trovare la funzione di distribuzione nel sistema. Cerchiamo quindi una funzione $f(\vb{r},\vb{p},t)$ tale che la quantità
+(Questo paragrafetto potrebbe essere da rivedere)A seguito di questi processi di scattering, se essi sono abbastanza efficienti, si ha un "dephasing", ossia una randomizzazione della fase della funzione d'onda. In conseguenza a ciò vengono meno tutti i processi coerenti come i processi di interferenza. Nel momento in cui vengono meno questi ultimi, la particella, a meno di correzioni di cui terremo conto, si comporta come una particella classica. Questo tipo di descrizione è tipico della fisica dei semiconduttori. Bisogna però stare attenti a che processo si sta studiando: ad esempio, tale approccio non funziona per studiare l'assorbimento inter-banda in cui vogliamo studiare il passaggio di un elettrone dalla banda di valenza alla banda di conduzione, in quanto il concetto di banda non esiste classicamente; al contrario, tale approccio funziona quando studiamo trasporto in corrente continua o modulato debolmente.\\
+Ritornando al nostro sistema mesoscopico collegato ai due serbatoi, ci proponiamo di trovare la funzione di distribuzione degli elettroni in tale sistema.\\
+Cerchiamo quindi una funzione\sn{Notiamo che la validità del concetto di funzione di distribuzione $f(\vb{r}, \vb{p},t)$ poggia sull'assunzione fatta precedentemente su $\lambda_F$.} $f(\vb{r},\vb{p},t)$ tale che la quantità
 \begin{equation*}
-    f(\vb{r},\vb{p},t) \frac{\dd[3]{\vb{r}} \dd[3]{\vb{p}}}{(2 \pi \hbar)^3}
+    f(\vb{r},\vb{p},t) \frac{\dd[3]{\vb{r}} \dd[3]{\vb{p}}}{(2 \pi \hbar)^3},
 \end{equation*}
-cioè il prodotto tra essa e il volume dello spazio delle fasi ci dia il numero medio di elettroni nella posizione $\vb{r}$ aventi impulso $\vb{p}$ all'interno del volume $\dd[3]{\vb{r}} \dd[3]{\vb{p}}$.
-A rigor di termini, il principio di indeterminazione di Heisenberg afferma che non possiamo simultaneamente determinare con precisione la quantità di moto e la posizione di un elettrone, mettendo in discussione la stessa validità del concetto di funzione di distribuzione $f(\vb{r}, \vb{p})$. Tuttavia, $f$ può essere definita nel momento in cui il principio di indeterminazione ci dà un'incertezza che è più piccola della lunghezza di Fermi, dunque della lunghezza del pacchetto d'onda, per cui tale incertezza può essere trascurata.\\
-Per trovare la funzione di distribuzione ne osserviamo l'evoluzione temporale. Dopo un tempo $\dd{t}$ la funzione di distribuzione sarà $f(\vb{r} + \vb{v} \dd{t}, \vb{p} + \vb{F} \dd{t}, t + \dd{t})$, dove $\vb{v}$ è la velocità dell'elettrone e $\vb{F}$ è la forza che agisce su di esso, generata dal campo elettromagnetico dovuto alla caduta di potenziale
+cioè il prodotto tra essa e il volume elementare dello spazio delle fasi, ci dia la frazione di elettroni aventi posizione tra $\vb{r}$ e $\dd[3]{\vb{r}}$ e impulso tra $\vb{p}$ e $\dd[3]{\vb{p}}$ (la normalizzazione è fissata a 1 oppure a $g_S$?).\\
+Per trovare la funzione di distribuzione ne studiamo l'evoluzione temporale. Dopo un tempo $\dd{t}$, la funzione di distribuzione sarà $f(\vb{r} + \vb{v} \dd{t}, \vb{p} + \vb{F} \dd{t}, t + \dd{t})$, dove $\vb{v}$ è la velocità dell'elettrone e $\vb{F}$ è la forza che agisce su di esso, generata dal campo elettromagnetico dovuto alla caduta di potenziale
 %che assumiamo una dipendenza spaziale regolare
-. Se non avvengono fenomeni di scattering, per il teorema di Liouville\mn{Esso afferma che un volumetto $\dd[3]\vb{r}\dd[3]\vb{p}$ dello spazio delle fasi centrato in $(\vb{r},\vb{p})$ evolve nello spazio delle fasi rimanendo invariato.} la funzione di distribuzione rimane costante, ossia
+. Se non avvengono fenomeni di scattering, per il teorema di Liouville\mn{Esso afferma che un volumetto $\dd[3]\vb{r}\dd[3]\vb{p}$ dello spazio delle fasi centrato in $(\vb{r},\vb{p})$ evolve nello spazio delle fasi rimanendo invariato.(da sistemare)} la funzione di distribuzione rimane costante, ossia
 \begin{equation*}
     f(\vb{r} + \vb{v} \dd{t}, \vb{p} + \vb{F} \dd{t}, t + \dd{t}) - f(\vb{r}, \vb{p}, t)
     =0
 \end{equation*}
-Se invece avvengono fenomeni di scattering, la funzione di distribuzione varia. Denotata con $I_{\rm coll}[f] \dd{t}$ tale differenza, dove $I_{\rm coll}[f]$ è detto integrale collisionale il quale tiene conto di tutti i processi di scattering, abbiamo che
+Se invece avvengono fenomeni di scattering, la funzione di distribuzione varia. Denotata con $I_{\rm coll}[f] \dd{t}$ tale differenza, dove $I_{\rm coll}[f]$ è detto integrale collisionale e tiene conto di tutti i processi di scattering, abbiamo che
 \begin{equation}
     f(\vb{r} + \vb{v} \dd{t}, \vb{p} + \vb{F} \dd{t}, t + \dd{t}) - f(\vb{r}, \vb{p}, t)
     =I_{\rm coll}[f] \dd{t}
     \label{eq:differenza_funzione_distribuzione_con_collisioni}
 \end{equation}
-Il membro destro dell'\eqref{eq:differenza_funzione_distribuzione_con_collisioni} rappresenta la correzione quantistica.\\
-Consideriamo il membro di sinistra: se $\dd{t}$ è sufficientemente piccolo possiamo espandere il primo termine fino al primo ordine, ottenendo
+Il membro destro dell'Equazione \eqref{eq:differenza_funzione_distribuzione_con_collisioni} rappresenta il termine quantistico nell'equazione che descrive il nostro sistema.\\
+Consideriamo il membro di sinistra ed espandiamo al primo in ordine in $\dd{t}$, ottenendo\sn{da fare il comando smallo per fare opiccolo calligrafico.}
 \begin{equation*}
     \begin{split}
         & \hspace{0.1cm} f(\vb{r} + \vb{v} \dd{t}, \vb{p} + \vb{F} \dd{t}, t + \dd{t}) - f(\vb{r}, \vb{p}, t)
         \\
-        = & \hspace{0.1cm} f(\vb{r}, \vb{p}, t) + \pdv{f}{\vb{r}} \vdot \vb{v} \dd{t} + \pdv{f}{\vb{p}} \vdot \vb{F} \dd{t} + \pdv{f}{t} \dd{t} - f(\vb{r}, \vb{p}, t)
+        = & \hspace{0.1cm} f(\vb{r}, \vb{p}, t) + \pdv{f}{\vb{r}} \vdot \vb{v} \dd{t} + \pdv{f}{\vb{p}} \vdot \vb{F} \dd{t} + \pdv{f}{t} \dd{t} - f(\vb{r}, \vb{p}, t) +o{(\dd{t})^2}
         \\
-        = & \hspace{0.1cm} \pdv{f}{\vb{r}} \vdot \vb{v} \dd{t} + \pdv{f}{\vb{p}} \vdot \vb{F} \dd{t} + \pdv{f}{t} \dd{t}
+        \approx & \hspace{0.1cm} \pdv{f}{\vb{r}} \vdot \vb{v} \dd{t} + \pdv{f}{\vb{p}} \vdot \vb{F} \dd{t} + \pdv{f}{t} \dd{t}
     \end{split}
 \end{equation*}
-Inserendo il risultato trovato e semplificando otteniamo
+Utilizzando quanto trovato, otteniamo
 \begin{equation}
     \pdv{f}{\vb{r}} \vdot \vb{v} + \pdv{f}{\vb{p}} \vdot \vb{F} + \pdv{f}{t}
-    =I_{\rm coll}[f]
+    =I_{\rm coll}[f],
     \label{eq:equazione_di_Boltzmann}
 \end{equation}
-l'\eqref{eq:equazione_di_Boltzmann} rappresenta l'equazione di Boltzmann.\\
-Per inciso, senza il termine collisionale l'equazione di Boltzmann prende il nome di equazione di Vlasov, che quindi è
+che è chiamata equazione di Boltzmann.\\
+Puntualizziamo che in assenza del termine collisionale, l'equazione di Boltzmann prende il nome di equazione di Vlasov:
 \begin{equation}
     \pdv{f}{\vb{r}} \vdot \vb{v} + \pdv{f}{\vb{p}} \vdot \vb{F} + \pdv{f}{t}
-    =0
+    =0.
     \label{eq:equazione_di_Vlasov}
 \end{equation}
-Quindi, quando i processi di scattering sono trascurabili e dunque il sistema si comporta in maniera pulita ma lo possiamo ancora trattare semiclassicamente. Si presti attenzione al fatto che tale fatto non è per niente banale, in quanto come abbiamo detto se un sistema è pulito vuol dire che sono trascurabili i processi di scattering, ma ciò implica che probabilmente si verificano processi coerenti, quindi fenomeni di interferenza quantistica, per non potremmo utilizzare questa trattazione. In ultima analisi, le situazioni in cui è possibile utilizzare l'\eqrefcustom{eq:equazione_di_Vlasov} sono poche.\\
-Torniamo adesso all'\eqref{eq:equazione_di_Boltzmann}. \E utile esprimere la dipendenza da $\vb{p}$ tramite le coordinate sferiche, dunque dividendo la dipendenza dalla parte angolare da quella radiale. In tali termini, la funzione di distrubizione sarà nella forma $f(\vb{r},\vu{p},E)$, dove abbiamo messo l'energia al posto del modulo $p$ perché la relazione di dispersione è del tipo
+(paragrafetto da sistemare spiegando meglio che nel sistema i cammini liberi medi e $\lambda_F$ devono essere in relazione tale che $\lambda_F$ deve essere molto più piccola dei liberi cammini medi ma questi devono essere abbastanza piccoli e quindi i processi di scattering abbastanza efficienti da randomizzare la fase della funzione d'onda e poter trascurare processi coerenti)Quindi, quando i processi di scattering sono trascurabili e dunque il sistema si comporta in maniera pulita ma lo possiamo ancora trattare semiclassicamente. Si presti attenzione al fatto che tale fatto non è per niente banale, in quanto come abbiamo detto se un sistema è pulito vuol dire che sono trascurabili i processi di scattering, ma ciò implica che probabilmente si verificano processi coerenti, quindi fenomeni di interferenza quantistica, per non potremmo utilizzare questa trattazione. In ultima analisi, le situazioni in cui è possibile utilizzare l'\eqrefcustom{eq:equazione_di_Vlasov} sono poche.\\
+Torniamo adesso all'\eqref{eq:equazione_di_Boltzmann}. E' utile esprimere la dipendenza da $\vb{p}$ tramite le coordinate sferiche, dunque dividendo la dipendenza dalla parte angolare da quella radiale. In tali termini, la funzione di distrubizione sarà nella forma $f(\vb{r},\vu{p},E)$, dove abbiamo messo l'energia al posto del modulo $p$ perché la relazione di dispersione è del tipo
 \begin{equation*}
     \varepsilon(\vb{p})=
     \frac{\vb{p}^2}{2m}
