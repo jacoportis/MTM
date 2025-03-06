@@ -24,7 +24,7 @@ Tale assunzione implica che quando il numero di elettroni del reservoir varia, q
     = \frac{1}{\exp \bigl[ (E - \mu)/(k_B T) \bigr] + 1}
     \label{eq:distribuzione_Fermi-Dirac}
 \end{equation}
-Essa ci dà la frazione di elettroni aventi energia $E$ a temperatura $T$ e potenzialiìe chimico $\mu$ fissati.\\
+Essa rappresenta il numero medio di elettroni ad energia $E$, fissata la temperatura $T$ e potenziale chimico $\mu$.\\
 Ricordiamo che tale distribuzione segue l'andamento riportato in figura:
 \begin{figure}[H]
     \centering
@@ -77,11 +77,11 @@ In generale, i due serbatoi possono avere temperature $T_L$ e $T_R$ o potenziali
  \end{figure}
 \hspace{-0.6cm}In conseguenza a tale differenza di potenziale chimico, si verificherà un flusso di elettroni tra i due reservoir, facendo comunque restare questi ultimi in equilibrio per le precedenti assunzioni.\\
 (Di questo paragrafetto lascerei solo la prima nota, forse mettendola nella discussione sopra sui serbatoi ideali)Supponiamo che nei due serbatoi il sistema elettronico rimanga in equilibrio anche in presenza di una caduta di tensione o di una differenza di temperatura e, se vi è un flusso di corrente, assumiamo che nei due serbatoi avvenga un rilassamento istantaneo degli elettroni\sn{Per rilassamento istantaneo si intende un processo in cui un sistema passa da uno stato di non equilibrio a uno stato di equilibrio in un tempo trascurabilmente breve, praticamente istantaneo rispetto alle scale temporali del fenomeno in esame.}, i quali rimangono in equilibrio. Ciò significa che gli elettroni nei serbatoi possono essere sempre descritti dalla distribuzione di Fermi-Dirac, la quale rimane invariata\sn{Dubbio mio: ma visto che applichiamo il voltage drop non cambia il potenziale chimico? e quindi la distribuzione di Fermi-Dirac? probabilmente intende che la funzione di distribuzione è sempre una FD, come forma funzionale, ad un opportuno $\mu$}.\\
-Studiamo il problema con una teoria semiclassica, dove con tale espressione intendiamo che nell'equazione che descrive il sistema figurano sia termini di tipo classico che altri di tipo quantistico. Più precisamente, descriviamo gli elettroni come particelle classiche e riteniamo la loro posizione e il loro impulso conoscibili contemporaneamente con precisione sufficientemente grande, figurando questi come variabili classiche in alcuni termini, mentre convenientemente come operatori quantistici in altri. Quantitativamente, ciò è ragionevole quando la lunghezza d'onda di Fermi, che rappresenta la larghezza del pacchetto d'onda e quindi l'incertezza sulla posizione della particella data dal principio di indeterminazione di Heisenberg, data da\sn{io ho trovato come def $\frac{2\pi}{k_F}=\frac{2\pi\hbar}{\sqrt{2m^*E_F}}$}
+Studiamo il problema con una teoria semiclassica, dove con tale espressione intendiamo che nell'equazione che descrive il sistema figurano sia termini di tipo classico che altri di tipo quantistico. Più precisamente, descriviamo gli elettroni come particelle classiche e riteniamo la loro posizione e il loro impulso conoscibili contemporaneamente con precisione sufficientemente grande, figurando questi come variabili classiche in alcuni termini, mentre convenientemente come operatori quantistici in altri. Quantitativamente, ciò è ragionevole quando la lunghezza d'onda di Fermi, che rappresenta la larghezza del pacchetto d'onda e quindi l'incertezza sulla posizione della particella data dal principio di indeterminazione di Heisenberg, data da
 \begin{equation*}
-    \lambda_F=\frac{\pi \hbar}{E_F},
+    \lambda_F=\frac{2\pi}{k_F}=\frac{2\pi\hbar}{\sqrt{2mE_F}},
 \end{equation*}
-essendo $E_F$ l'energia di Fermi, è molto più piccola di tutte le scale di lunghezza del sistema. Ciò significa che $\lambda_F$ deve essere molto più piccola delle dimensioni tipiche del sistema e dei diversi liberi cammini medi, cioè delle distanze percorse mediamente da un elettrone tra due eventi consecutivi di scattering della medesima tipologia. In particolare, nella nostra trattazione siamo interessati a tre tipi di liberi cammini medi:
+essendo $E_F$ l'energia di Fermi e $m$ la massa efficace dell'elettrone, è molto più piccola di tutte le scale di lunghezza del sistema. Ciò significa che $\lambda_F$ deve essere molto più piccola delle dimensioni tipiche del sistema e dei diversi liberi cammini medi, cioè delle distanze percorse mediamente da un elettrone tra due eventi consecutivi di scattering della medesima tipologia. In particolare, nella nostra trattazione siamo interessati a tre tipi di liberi cammini medi:
 \begin{itemize}[leftmargin=0.5cm]
     \item la lunghezza di scattering elastico $\ell_{\rm el}$, associata allo scattering degli elettroni con le impurità del sistema;
     \item la lunghezza di scattering elettrone-elettrone $\ell_{\rm e,e}$, legata allo scattering di elettroni con altri elettroni e dunque dovuta all'interazione coulombiana;
@@ -106,13 +106,17 @@ Precisiamo i seguenti fatti:
         \end{tikzpicture}
     \end{figure}
 \end{itemize}
-(Questo paragrafetto potrebbe essere da rivedere)A seguito di questi processi di scattering, se essi sono abbastanza efficienti, si ha un "dephasing", ossia una randomizzazione della fase della funzione d'onda. In conseguenza a ciò vengono meno tutti i processi coerenti come i processi di interferenza. Nel momento in cui vengono meno questi ultimi, la particella, a meno di correzioni di cui terremo conto, si comporta come una particella classica. Questo tipo di descrizione è tipico della fisica dei semiconduttori. Bisogna però stare attenti a che processo si sta studiando: ad esempio, tale approccio non funziona per studiare l'assorbimento inter-banda in cui vogliamo studiare il passaggio di un elettrone dalla banda di valenza alla banda di conduzione, in quanto il concetto di banda non esiste classicamente; al contrario, tale approccio funziona quando studiamo trasporto in corrente continua o modulato debolmente.\\
+Un ulteriore precisione va fatta riguardo all'efficienza dei processi di scattering. Infatti, esiste un'ulteriore lunghezza caratteristica chiamata lunghezza di coerenza $\ell_\phi=v\tau_\phi$, dove $v$ è la velocità di gruppo e $\tau_\phi$ è il tempo che intercorre tra due processi di scattering a seguito dei quali viene modificata la fase della funzione d'onda della particella. Se $\ell_\phi$ è piccolo, cioè $\tau_\phi$ è piccolo, diciamo che lo scattering è efficiente e si ha il cosiddetto fenomeno di "dephasing", ossia una randomizzazione della fase della funzione d'onda. In conseguenza a ciò vengono meno tutti i processi coerenti, come i processi di interferenza. Nel momento in cui vengono meno questi ultimi, la particella, a meno di correzioni di cui terremo conto, si comporta come una particella classica. Questo tipo di descrizione è tipico della fisica dei semiconduttori, ma bisogna prestare attenzione al tipo di processo che si sta studiando: ad esempio, tale approccio non funziona per studiare l'assorbimento inter-banda in cui vogliamo studiare il passaggio di un elettrone dalla banda di valenza alla banda di conduzione, in quanto il concetto di banda non esiste classicamente; al contrario, tale approccio funziona quando studiamo trasporto in corrente continua o modulato debolmente.\\
 Ritornando al nostro sistema mesoscopico collegato ai due serbatoi, ci proponiamo di trovare la funzione di distribuzione degli elettroni in tale sistema.\\
-Cerchiamo quindi una funzione\sn{Notiamo che la validità del concetto di funzione di distribuzione $f(\vb{r}, \vb{p},t)$ poggia sull'assunzione fatta precedentemente su $\lambda_F$.} $f(\vb{r},\vb{p},t)$ tale che la quantità
+Cerchiamo quindi una funzione\sn{Notiamo che la validità del concetto di funzione di distribuzione $f(\vb{r}, \vb{p},t)$ poggia sull'assunzione fatta precedentemente su $\lambda_F$ e $\ell_\phi$.} $f(\vb{r},\vb{p},t)$ tale che la quantità
 \begin{equation*}
     f(\vb{r},\vb{p},t) \frac{\dd[3]{\vb{r}} \dd[3]{\vb{p}}}{(2 \pi \hbar)^3},
 \end{equation*}
-cioè il prodotto tra essa e il volume elementare dello spazio delle fasi, ci dia la frazione di elettroni aventi posizione tra $\vb{r}$ e $\dd[3]{\vb{r}}$ e impulso tra $\vb{p}$ e $\dd[3]{\vb{p}}$ (la normalizzazione è fissata a 1 oppure a $g_S$?).\\
+cioè il prodotto tra essa e il volume elementare dello spazio delle fasi, ci dia il numero di elettroni aventi posizione tra $\vb{r}$ e $\dd[3]{\vb{r}}$ e impulso tra $\vb{p}$ e $\dd[3]{\vb{p}}$. In particolare vale la seguente condizioni di normalizzazione:
+\begin{equation}
+    \int g_S\frac{\dd[3]{\vb{r}}\dd[3]{\vb{p}}}{(2\pi \hbar)^3} f(\vb{r},\vb{p},t) = N,
+\end{equation}
+dove $N$ è il numero totale di elettroni del nostro sistema mesoscopico e $g_s$ è la degenerazione di spin, che nel caso in esame è semplicemente pari a 2.\\
 Per trovare la funzione di distribuzione ne studiamo l'evoluzione temporale. Dopo un tempo $\dd{t}$, la funzione di distribuzione sarà $f(\vb{r} + \vb{v} \dd{t}, \vb{p} + \vb{F} \dd{t}, t + \dd{t})$, dove $\vb{v}$ è la velocità dell'elettrone e $\vb{F}$ è la forza che agisce su di esso, generata dal campo elettromagnetico dovuto alla caduta di potenziale
 %che assumiamo una dipendenza spaziale regolare
 . Se non avvengono fenomeni di scattering, per il teorema di Liouville\mn{Esso afferma che un volumetto $\dd[3]\vb{r}\dd[3]\vb{p}$ dello spazio delle fasi centrato in $(\vb{r},\vb{p})$ evolve nello spazio delle fasi rimanendo invariato.(da sistemare)} la funzione di distribuzione rimane costante, ossia
@@ -150,8 +154,8 @@ Puntualizziamo che in assenza del termine collisionale, l'equazione di Boltzmann
     =0.
     \label{eq:equazione_di_Vlasov}
 \end{equation}
-(paragrafetto da sistemare spiegando meglio che nel sistema i cammini liberi medi e $\lambda_F$ devono essere in relazione tale che $\lambda_F$ deve essere molto più piccola dei liberi cammini medi ma questi devono essere abbastanza piccoli e quindi i processi di scattering abbastanza efficienti da randomizzare la fase della funzione d'onda e poter trascurare processi coerenti)Quindi, quando i processi di scattering sono trascurabili e dunque il sistema si comporta in maniera pulita ma lo possiamo ancora trattare semiclassicamente. Si presti attenzione al fatto che tale fatto non è per niente banale, in quanto come abbiamo detto se un sistema è pulito vuol dire che sono trascurabili i processi di scattering, ma ciò implica che probabilmente si verificano processi coerenti, quindi fenomeni di interferenza quantistica, per non potremmo utilizzare questa trattazione. In ultima analisi, le situazioni in cui è possibile utilizzare l'\eqrefcustom{eq:equazione_di_Vlasov} sono poche.\\
-Torniamo adesso all'\eqref{eq:equazione_di_Boltzmann}. E' utile esprimere la dipendenza da $\vb{p}$ tramite le coordinate sferiche, dunque dividendo la dipendenza dalla parte angolare da quella radiale. In tali termini, la funzione di distrubizione sarà nella forma $f(\vb{r},\vu{p},E)$, dove abbiamo messo l'energia al posto del modulo $p$ perché la relazione di dispersione è del tipo
+Osserviamo che tale equazione è applicabile in poche situazioni, in quanto abbiamo supposto che i processi di scattering siano trascurabili ma allo stesso tempo che avvenga il fenomeno di dephasing.\\
+Torniamo adesso all'\eqref{eq:equazione_di_Boltzmann}. E' utile esprimere la dipendenza da $\vb{p}$ tramite le coordinate sferiche, dunque dividendo la dipendenza dalla parte angolare da quella radiale. In tali termini, la funzione di distribuzione sarà nella forma $f(\vb{r},\vu{p},E)$, dove abbiamo messo l'energia al posto del modulo $p$ perché la relazione di dispersione è del tipo
 \begin{equation*}
     \varepsilon(\vb{p})=
     \frac{\vb{p}^2}{2m}
@@ -244,17 +248,17 @@ Il termine $v_F/L$ rappresenta la scala dell'inverso dei tempi tipici dell'\eqre
     Il risultato trovato ci dice che, in assenza di collisioni, i due serbatoi restano indipendenti; inoltre gli elettroni iniettati da sinistra seguono la funzione di distribuzione del serbatoio sinistro anche nel sistema mesoscopico (cioè dentro il cavo) e gli elettroni iniettati da destra nel sistema avranno la funzione di distribuzione del serbatoio destro.\mn{Così come riportato in \cite{Heikkila}, ciò significa che "Il sistema di elettroni all'interno del filo è quindi composto da elettroni che si muovono verso sinistra e elettroni che si muovono verso destra, che non si mescolano in assenza di diffusione e che sono distribuiti in energia secondo le funzioni di distribuzione nei serbatoi da cui provengono."}
 \end{example}
 \section{Osservabili}
-Il motivo per cui siamo interessati a trovare la funzione di distribuzione è che possiamo esprimere le osservabili del sistema in termini di essa. In particolare, la densità di portatori di carica del sistema sarà data da\mn{Infatti integrando $f$ rispetto all'impulso otteniamo la densità di probabilità di trovare un elettrone in posizione $\vb{r}$, cioè proprio la densità di portatori.}
+Il motivo per cui siamo interessati a trovare la funzione di distribuzione è che possiamo esprimere le osservabili del sistema in termini di essa. In particolare, la densità spaziale di portatori di carica del sistema sarà data da
 \begin{equation*}
     n(\vb{r})
-    =g_s \int \frac{\dd[3]{\vb{p}}}{(2 \pi \hbar)^3} f(\vb{r},\vb{p},t)
+    =g_s \int \frac{\dd[3]{\vb{p}}}{(2 \pi \hbar)^3} f(\vb{r},\vb{p},t).
 \end{equation*}
-dove $g_s$ è la degenerazione di spin, che nel caso in esame è semplicemente pari a 2.\\
-Analogamente, la densità di corrente sarà data da\mn{Abbiamo scritto la velocità come $\vb{v(p)}$ per sottolineare che essa è data da $\grad_p \varepsilon(\vb{p})$.}
+Risulta immediato verificare che integrando $n(\vb{r})$ in tutto il volume spaziale si ottiene il numero di elettroni del sistema. Analogamente, la densità di corrente sarà data da
 \begin{equation*}
     \vb{j}_c(\vb{r})
-    =-e g_s \int \frac{\dd[3]{\vb{p}}}{(2 \pi \hbar)^3} \vb{v}(\vb{p}) f(\vb{r},\vb{p})
+    =-e g_s \int \frac{\dd[3]{\vb{p}}}{(2 \pi \hbar)^3} \vb{v}(\vb{p}) f(\vb{r},\vb{p}),
 \end{equation*}
+dove abbiamo scritto la velocità come $\vb{v(p)}$ per sottolineare che essa è data da $\grad_p \varepsilon(\vb{p})$.
 Passando in coordinate polari possiamo riscrivere tale quantità come
 \begin{equation*}
     \vb{j}_c(\vb{r})
